@@ -120,7 +120,7 @@ header .container ul a{
     top: -2px;
     transition: 0.5s;
     left: -2px;
-    position: absolute;
+    position: absolute; /*Pour le placer ou on veut*/
     height: 70px;
     width: 280px;
     border-radius: 50px;
@@ -191,3 +191,62 @@ header .container ul a{
         margin-bottom: 60px;
     }
 }
+
+/* SECTION 2 */
+
+.sec2{
+    background-color: #232323;
+}
+
+.sec2 .container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.content-top, .content-bottom{
+    display: flex;
+    align-items: center;
+}
+
+.sec2 .title{
+    position: relative; /*C'est pour placer le before par rapport au title qui est en position absolute*/
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+}
+.sec2 .title::before{
+    content: "";
+    position: absolute; /*Pour le placer ou on veut*/
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #66aefc;
+    clip-path: polygon(100% 0, 100% 100%, 78% 38%, 65% 100%, 50% 36%, 33% 100%, 16% 38%, 0 100%, 0 0);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec2 .left{
+    color: white;
+}
+
+.sec2 h2{
+    font-size: 2.5em;
+}
+
+.sec2 .titre{
+    display: flex;
+    align-items: center;
+}
+
+.sec2 .point{
+    height: 20px;
+    width: 20px;
+    background-color: #31489f;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
