@@ -155,6 +155,7 @@ header .container ul a{
     .sec1{
         height: 100%;
         margin-top: 100px;
+        padding-bottom: 100px;
     }
     .sec1 .bg-responsive{
         margin-top: 50px;
@@ -192,21 +193,33 @@ header .container ul a{
     }
 }
 
+/* TRANSITION */
+
+.transition{
+    width: 100%;
+    position: absolute;
+}
+.transition img{
+    width: 100%;
+    transform: translateY(-30%);
+    filter: drop-shadow(0 10px 5px #acc4e8);
+}
+
 /* SECTION 2 */
 
 .sec2{
     background-color: #232323;
+    padding: 120px 0;
 }
 
 .sec2 .container{
     max-width: 1500px;
     margin: 0 auto;
-}
-
-.content-top, .content-bottom{
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
+
 
 .sec2 .title{
     position: relative; /*C'est pour placer le before par rapport au title qui est en position absolute*/
@@ -214,6 +227,7 @@ header .container ul a{
     text-align: center;
     color: white;
     font-size: 3em;
+    margin-bottom: 100px;
 }
 .sec2 .title::before{
     content: "";
@@ -228,7 +242,7 @@ header .container ul a{
     transform: translateX(-50%);
 }
 
-.sec2 .left{
+.sec2 .content{
     color: white;
 }
 
@@ -249,4 +263,86 @@ header .container ul a{
     border-radius: 50px;
     margin-right: 20px;
 }
+
+.sec2 .separateur{
+    width: 75px;
+    height: 5px;
+    background-color: #66aefc;
+    margin: 25px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+.sec2 p{
+    max-width: 600px;
+    line-break: anywhere;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media(min-width: 1500px){
+    .sec2 .content-top .left{
+        max-width: 700px;
+    }
+    .sec2 .content-bottom .right{
+        max-width: 700px;
+    }
+}
+
+@media(max-width: 1500px){
+    .sec2 .content{
+        margin: 50px 0;
+    }
+    .sec2 .content img{
+        width: 90%;
+    }
+    .sec2 .content-top{
+        flex-direction: column;
+    }
+    .sec2 .content-bottom{
+        flex-direction: column-reverse;
+    }
+    .sec2 .container{
+        width: 100%;
+        text-align: center;
+    }
+    .sec2 p{
+        max-width: 900px;
+        margin: 0 50px;
+    }
+    .sec2 .titre{
+        justify-content: center;
+        flex-direction: column;
+    }
+    /* .sec2 .separateur{
+        margin: 25px auto; une autre solution
+    } */
+    .sec2 .content-top .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .sec2 .content-bottom .right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .sec2 .separateur{
+        border-radius: 50px;
+    }
+    .sec2 .point{
+        margin-right: 0px;
+    }
+    
+}
+
+/* , .content-bottom{
+
+} */
 
