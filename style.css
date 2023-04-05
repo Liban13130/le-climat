@@ -428,10 +428,11 @@ header .container ul a{
 @media(max-width: 1450px){
     .sec3 .right{
         max-width: 450px;
+        text-align: center;
     }
 }
 
-@media(max-width: 1150px){
+@media(max-width: 1050px){
     .sec3 .container{
         flex-direction: column;
     }
@@ -449,5 +450,11 @@ header .container ul a{
     }
     .sec3 button{
         margin: 50px 0;
+    }
+    .sec3 .right img{
+        width: 80%;
+    }
+    .sec3 h1{
+        font-size: 3em;
     }
 }
