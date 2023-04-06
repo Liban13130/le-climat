@@ -19,6 +19,14 @@
 </head>
 <body>
 
+    <div class="onglet-side">
+        <a href="#accueil" class="active"></a>
+        <a href="#mission"></a>
+        <a href="#propos"></a>
+        <a href="#don"></a>
+    </div>
+
+
     <header>
         <div class="container">
             <div class="logo">
@@ -26,10 +34,10 @@
             </div>
             <div class="onglet">
                 <ul>
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">Notre mission</a></li>
-                    <li><a href="">A propos</a></li>
-                    <li><a href="">Faire un don</a></li>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#mission">Notre mission</a></li>
+                    <li><a href="#propos">A propos</a></li>
+                    <li><a href="#don">Faire un don</a></li>
                 </ul>
             </div>
             <div class="logo">
@@ -38,7 +46,7 @@
     </header>
 
 
-    <div class="sec1">
+    <section class="sec1" id="accueil">
         <div class="container">
            <h1>Rechauffement <br> climatique</h1> 
            <a href=""><button>En savoir plus <i class="fa-solid fa-arrow-right-long"></i></button>
@@ -47,13 +55,13 @@
             <img src="images/11.png" alt="">
            </div>
         </div>
-    </div>
+    </section>
 
     <div class="transition">
         <img src="images/10.png" alt="">
     </div>
 
-    <div class="sec2">
+    <section class="sec2" id="mission">
         <div class="container">
 
             <div class="title">
@@ -98,9 +106,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <section class="sec3">
+    <section class="sec3" id="propos">
         <div class="container">
             <div class="left">
                 <h1>Des espèces en <br>
@@ -121,5 +129,35 @@
             </div>
         </div>
     </section>
+
+    <section class="sec4" id="don">
+        <div class="content">
+            <div class="left">
+                <img src="images/5.png" alt="">
+            </div>
+            <div class="mid">
+                <h1>Pour chaque don</h1>
+                <h2>1M² de banquise sauvée</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aut consequatur corrupti nihil eius corporis ab,
+                    iste libero, ex similique asperiores! Repudiandae nesciunt vitae atque incidunt sint placeat corrupti consequatur?
+                </p>
+                <a href="">
+                    <button>
+                        Faire un don <i class="fab fa-paypal"></i>
+                    </button>
+                </a>
+            </div>
+            <div class="right">
+                <img src="images/8.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', '.onglet-side a', function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    </script>
 </body>
 </html>
